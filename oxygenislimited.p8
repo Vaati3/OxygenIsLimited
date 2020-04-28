@@ -609,8 +609,8 @@ function mid_draw()
  print("you have found your ship", hero.x - 48, hero.y - 48, 9)
  print("it's a wreck, you can't use it", hero.x - 48, hero.y - 40)
  print("but if you can find 3 circuit", hero.x - 48, hero.y - 32)
- print("you can repare the communication", hero.x - 48, hero.y - 24)
-	print("service and call for help", hero.x - 48, hero.y - 16)
+ print("you can repair the distress", hero.x - 48, hero.y - 24)
+	print("beacon and call for help", hero.x - 48, hero.y - 16)
 	print("you have found your blaster", hero.x - 48, hero.y - 8)
 	print("press ❎ to fire and continue", hero.x - 48, hero.y)
 end
@@ -621,6 +621,7 @@ function win_update()
 		status = "menu"
 		hero = player:new()
 		timer = oxygen:new()
+		music(0)
 	end
 end
 
@@ -628,10 +629,10 @@ function win_draw()
 	cls()
 	map(0,0,0,0,128, 64)
  hero:draw()
- print("congratulation", hero.x - 48, hero.y - 48, 9)
- print("you've managed to contact earth", hero.x - 48, hero.y - 40)
- print("they are coming to save you", hero.x - 48, hero.y - 32)
- print("press ❎ to return to menu", hero.x - 48, hero.y - 24)
+ print("congratulation", hero.x - 52, hero.y - 48, 3)
+ print("you've managed to contact earth", hero.x - 52, hero.y - 40)
+ print("they are coming to save you", hero.x - 52, hero.y - 32)
+ print("press ❎ to return to menu", hero.x - 52, hero.y - 24)
 end
 
 function lose_update()
@@ -640,6 +641,7 @@ function lose_update()
 		status = "menu"
 		hero = player:new()
 		timer = oxygen:new()
+		music(0)
 	end
 end
 
