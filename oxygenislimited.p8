@@ -621,6 +621,9 @@ function win_update()
 		status = "menu"
 		hero = player:new()
 		timer = oxygen:new()
+		for m in all(monster) do
+			m.alive = true
+		end
 		music(0)
 	end
 end
@@ -641,6 +644,9 @@ function lose_update()
 		status = "menu"
 		hero = player:new()
 		timer = oxygen:new()
+		for m in all(monster) do
+			m.alive = true
+		end
 		music(0)
 	end
 end
